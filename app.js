@@ -1,5 +1,5 @@
 (function(){'use strict';
- const C=window.CONTENT,E=window.Engine,D=window.DATASET,KEY='laboratorio-electoral-v1';let s=E.initial(),taskIndex=0,running=false,lastTick=0,toastHandle;
+ const C=window.CONTENT,E=window.Engine,D=window.DATASET,KEY='laboratorio-electoral-v2';let s=E.initial(),taskIndex=0,running=false,lastTick=0,toastHandle;
  const $=q=>document.querySelector(q),esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const options=(items,value)=>items.map(item=>{const [v,t]=Array.isArray(item)?item:[item,item];return `<option value="${esc(v)}" ${String(v)===String(value)?'selected':''}>${esc(t)}</option>`;}).join('');
  const select=(label,id,items,value,extra='')=>`<label>${label}<select id="${id}" ${extra}>${options(items,value)}</select></label>`;
@@ -14,7 +14,7 @@
  function go(stage){s.stage=Math.max(0,Math.min(C.stages.length-1,stage));taskIndex=0;persist();render();$('#main').focus();window.scrollTo(0,0);}
  function render(){const screens=window.createSpanishViews({C,E,D,s,taskIndex,esc,options,select,area,button,pct});document.title=`${C.stages[s.stage][1]} · Del dato al informe`;$('#navigation').innerHTML=C.stages.map((a,i)=>`<button class="nav-step ${i===s.stage?'active':''}" data-action="goto" data-stage="${i}" ${i===s.stage?'aria-current="step"':''}><span class="nav-number">${String(i+1).padStart(2,'0')}</span><span>${a[1]}<small>${a[2]} min · ${a[3]}</small></span></button>`).join('');$('#main').innerHTML=screens[s.stage]()+`<div class="next-row">${s.stage?button('← Anterior','prev'):'<span class="hint">Recorrido guiado · 120 minutos</span>'}${s.stage<C.stages.length-1?button(`${s.stage===0?'Comenzar recorrido':'Siguiente etapa'} →`,'next',true):button('Volver al informe','goto',false,'data-stage="5"')}</div>`;updateClock();}
  function updateClock(){const n=Math.floor(s.elapsed);$('#clock').textContent=`${String(Math.floor(n/60)).padStart(2,'0')}:${String(n%60).padStart(2,'0')} / 120 min`;$('#timer').textContent=running?'Pausar reloj':'Iniciar reloj';}
- function backup(){json('respaldo-mesa.json',s);}
+ function backup(){json('respaldo-mesa-v2.json',s);}
  function harvestData(){return {anonymous:true,answers:C.harvest.map((q,i)=>({question:q,answer:s.harvest[i]})),extended:C.extended.map((q,i)=>({question:q,answer:s.extended[i]})),feedback:s.feedback,commitment:s.commitment};}
  function resetAssignments(){s.sample=[];s.assignments=[];s.reviews={};taskIndex=0;}
  function settingsChanged(key,value){const previous=s.settings[key];s.settings[key]=value;if(s.settings.reviewers>s.settings.participants){s.settings[key]=previous;toast('No puede haber más revisores activos que participantes.');render();return;}if(key==='reviewers'&&s.sample.length){if(Object.keys(s.reviews).length&&!confirm('Cambiar revisores rehace las asignaciones y borra las calificaciones de esta muestra. ¿Continuar?')){s.settings[key]=previous;render();return;}s.assignments=E.assign(s.sample,s.settings.reviewers);s.reviews={};taskIndex=0;}persist();render();}

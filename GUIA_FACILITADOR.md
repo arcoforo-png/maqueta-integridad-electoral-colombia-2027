@@ -4,6 +4,14 @@
 
 En 120 minutos, cada mesa reconstruye el proceso completo de monitoreo y reconoce dónde se pierde información, se agota capacidad o hace falta una decisión humana. No se pretende formar operadores de una herramienta real ni diseñar íntegramente un monitor local.
 
+## Actualización del banco
+
+La versión 1.1 usa AFacebook, BX, CTikTok y DInstagram como plataformas simuladas, con 100 publicaciones en cada una. No consulta esos servicios. Los 400 textos son distintos, construidos con 80 formulaciones y cinco temas. Puede consultar la composición en `BANCO_PUBLICACIONES.md`.
+
+Para comparar búsquedas, use «presupuesto», «horario» o «show» y observe qué deja fuera cada término. Las etiquetas de la muestra usada como referencia de estilo no se heredaron automáticamente. Los ejemplos siguen siendo enteramente ficticios y la clasificación requiere criterio humano.
+
+Al pasar desde la versión anterior comienza una sesión de versión 2, para no asociar revisiones guardadas a textos diferentes. Los respaldos previos deben abrirse con la versión anterior del código.
+
 ## Antes de la sesión
 
 Prepare un dispositivo por mesa de 5–8 personas, con el paquete descomprimido y `index.html` abierto. Pruebe respaldos, impresión y legibilidad en los equipos que se usarán. Cada mesa funciona por separado: no necesita red ni comparte respuestas automáticamente. Reserve la pantalla común para orientar el recorrido o conducir la puesta en común.

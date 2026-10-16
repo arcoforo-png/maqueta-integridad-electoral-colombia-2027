@@ -1,14 +1,24 @@
 # Reporte de pruebas
 
-Fecha: 16 de octubre de 2026. Versión: 1.0.0. Solo se usaron datos ficticios, incluidas las respuestas de prueba.
+Fecha: 16 de octubre de 2026. Versión actual: 1.1.0. Solo se usaron datos ficticios, incluidas las respuestas de prueba.
 
-## Resultado
+## Actualización de publicaciones versión 1.1
+
+Se renovó el universo con 400 textos distintos y cuatro plataformas simuladas: AFacebook, BX, CTikTok y DInstagram, 100 publicaciones por plataforma. Se conservaron las ocho familias de casos de 50 registros; cinco temas locales aparecen en 80 registros cada uno. La fuente de estilo se examinó localmente y no se incorporó a la aplicación ni al repositorio. No se transfirieron automáticamente sus etiquetas.
+
+Las 16 pruebas de lógica pasan. Las comprobaciones adicionales cubren unicidad exacta de los textos, distribución de plataformas y temas, formatos, consultas que dejan casos fuera, ausencia de identificadores de cuentas en los textos y rechazo explícito de respaldos de versión 1. La auditoría local de separación encontró cero copias completas, cero cuentas trasladadas y cero secuencias compartidas de diez palabras con la muestra de referencia. Esta comparación no es una garantía absoluta de desidentificación; los textos se redactaron de nuevo usando roles genéricos.
+
+La interfaz local cargó las cuatro plataformas; se ejecutó una consulta por cada una. La búsqueda de «horario» recuperó cinco casos iniciales. En una sesión de prueba separada se recorrieron las nueve etapas, se registraron cinco dilemas y ocho calificaciones sobre seis publicaciones, se produjo un acuerdo de 50 % sobre dos pares y se exportaron informe y respaldo de versión 2. Se verificaron sus archivos y la conservación de la sesión tras recargar. No se observaron advertencias ni errores en consola.
+
+El almacenamiento de versión 1 permanece sin borrar; la versión 2 usa otra clave y no mezcla calificaciones anteriores con textos reemplazados. La agenda y las limitaciones de validación presencial permanecen vigentes. Los detalles históricos siguientes corresponden a la versión 1.0, incluido su conteo de 25 resultados para «presupuesto»; el conteo inicial actual es 48.
+
+## Resultado de la primera versión
 
 El recorrido de las nueve etapas se completó mediante automatización del navegador de Codex sobre una vista previa local. Se verificaron 400 publicaciones disponibles después del pico, seis publicaciones únicas revisadas, ocho calificaciones, cinco decisiones éticas y respuestas de cosecha exportables. Se introdujo deliberadamente un desacuerdo: el informe mostró 50 % de acuerdo sobre dos pares y 394 publicaciones pendientes del ejercicio.
 
 Las 12 pruebas automatizadas de lógica incluidas en `tests/core.test.cjs` pasan. Se ejecutan con `node --test tests/core.test.cjs` y no requieren paquetes adicionales.
 
-## Comprobaciones automáticas reproducibles
+## Comprobaciones automáticas de la primera versión
 
 | Comprobación | Resultado |
 | --- | --- |

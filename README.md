@@ -6,6 +6,8 @@ Maqueta pedagógica de integridad de la información electoral para un taller pr
 
 Todos los actores, plataformas, publicaciones y fichas de contexto son ficticios. Está inspirada en sistemas de monitoreo electoral; no replica eMonitor+ ni utiliza su marca. No recolecta redes reales, no usa IA remota y no verifica hechos reales.
 
+**Versión 1.1:** AFacebook, BX, CTikTok y DInstagram evocan plataformas conocidas dentro de la simulación. El nuevo banco tiene 400 textos distintos, con lenguaje más cercano a publicaciones y comentarios, sin nombres, cuentas ni enlaces de personas reales. Consulte [la composición y los criterios del banco](BANCO_PUBLICACIONES.md). No hay conexión ni afiliación con las plataformas evocadas.
+
 ## Abrir sin instalar
 
 1. Descargue y descomprima el paquete completo.
@@ -18,6 +20,8 @@ Todos los recursos necesarios están incluidos. No es necesario instalar Node, e
 Cada mesa debe usar su propio dispositivo o un perfil de navegador separado. Dos pestañas del mismo origen y perfil comparten el mismo almacenamiento: no son mesas independientes. Los dispositivos distintos no sincronizan datos.
 
 Los campos son anónimos por defecto. Evite ingresar datos personales. La aplicación no contiene llamadas de red, rastreadores, cuentas ni envío de respuestas. GitHub Pages, al visitarse en línea, sirve los archivos según las condiciones de ese servicio; las respuestas del taller permanecen en el dispositivo. El facilitador acuerda con las mesas si se recogerán archivos y cuándo se eliminarán. «Nueva sesión» reemplaza los datos locales; los archivos descargados se administran aparte.
+
+Al actualizar desde la versión 1.0 se inicia una sesión independiente de versión 2. Los datos anteriores no se borran ni se reasignan a los textos nuevos. Los respaldos antiguos requieren la aplicación anterior, disponible en el historial del repositorio; el programa los rechaza expresamente para evitar mezclarlos con el nuevo universo.
 
 ## Preparar el taller
 
@@ -59,7 +63,8 @@ node scripts/preview.cjs
 
 El último comando abre un servidor opcional en `http://127.0.0.1:4173`. Sirve solo para desarrollo.
 
-- `content.js`: agenda, definiciones, tarjetas, actores ficticios y plantillas de publicaciones.
+- `content.js`: agenda, definiciones, tarjetas y actores ficticios.
+- `scenarios-es.js`: 80 formulaciones sintéticas, cinco temas y formatos de las cuatro plataformas simuladas. No incluye la muestra original de referencia.
 - `ui-es.js`: plantillas y textos de las nueve pantallas, separados del controlador. Para traducir, adapte este archivo, `content.js`, los rótulos del HTML y los mensajes breves del controlador. No hay traducciones adicionales incluidas.
 - `core.js`: generación, consultas, muestreo, capacidad, métricas, informes, validación y CSV.
 - `dataset.js`: datos incluidos para apertura local; `dataset.json`: copia legible.
@@ -67,7 +72,7 @@ El último comando abre un servidor opcional en `http://127.0.0.1:4173`. Sirve s
 - `styles.css`: estilo adaptable, estados de foco y reglas de impresión.
 - `tests/core.test.cjs`: pruebas automatizadas de lógica y contratos de datos.
 
-Semilla fija: `20271031`; 400 registros. Para cambiar definiciones base edite `CONTENT.codebook` en `content.js`, regenere y pruebe. Para ajustar solo la sesión use las definiciones editables de la pantalla. Si cambia el esquema de respaldo, cambie la versión y actualice su validador. No incluya exportaciones de participantes en el repositorio.
+Semilla fija: `20271031`; 400 registros con 400 textos distintos, 100 por plataforma. La diversidad procede de 80 formulaciones combinadas con cinco temas, sin atribuir independencia semántica a cada combinación. Para cambiar definiciones base edite `CONTENT.codebook` en `content.js`, regenere y pruebe. Para ajustar solo la sesión use las definiciones editables de la pantalla. Si cambia el esquema de respaldo o sustituye los textos, cambie la versión y actualice su validador. No incluya muestras de redes reales ni exportaciones de participantes en el repositorio.
 
 ## Publicar en su repositorio de GitHub
 
