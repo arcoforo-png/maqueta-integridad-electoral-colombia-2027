@@ -1,6 +1,6 @@
 # Reporte de pruebas
 
-Fecha: 16 de octubre de 2026. Versión actual: 1.1.0. Solo se usaron datos ficticios, incluidas las respuestas de prueba.
+Fecha: 16 de octubre de 2026. Versión actual: 1.1.1. Solo se usaron datos ficticios, incluidas las respuestas de prueba.
 
 ## Actualización de publicaciones versión 1.1
 

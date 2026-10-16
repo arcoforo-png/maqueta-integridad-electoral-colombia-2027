@@ -1,6 +1,6 @@
 # Composición del universo de publicaciones
 
-Versión 1.1.0, conjunto de datos 2. El universo contiene **400 textos distintos**, todos sintéticos, generados a partir de 80 formulaciones y cinco temas locales. El tono incorpora mensajes breves, mayúsculas, burlas, preguntas, abreviaturas, hashtags y emojis. Una muestra de publicaciones aportada para el ejercicio se utilizó como referencia de estilo y problemas de clasificación, sin incorporarla al repositorio ni copiar sus textos, nombres, cuentas, enlaces o acusaciones particulares.
+Versión 1.1.1, conjunto de datos 2. El universo contiene **400 textos distintos**, todos sintéticos, generados a partir de 80 formulaciones y cinco temas locales. El tono incorpora mensajes breves, mayúsculas, burlas, preguntas, abreviaturas, hashtags y emojis. Una muestra de publicaciones aportada para el ejercicio se utilizó como referencia de estilo y problemas de clasificación, sin incorporarla al repositorio ni copiar sus textos, nombres, cuentas, enlaces o acusaciones particulares.
 
 ## Plataformas simuladas
 
