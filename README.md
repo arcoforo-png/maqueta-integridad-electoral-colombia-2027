@@ -23,6 +23,8 @@ Los campos son anónimos por defecto. Evite ingresar datos personales. La aplica
 
 Al actualizar desde la versión 1.0 se inicia una sesión independiente de versión 2. Los datos anteriores no se borran ni se reasignan a los textos nuevos. Los respaldos antiguos requieren la aplicación anterior, disponible en el historial del repositorio; el programa los rechaza expresamente para evitar mezclarlos con el nuevo universo.
 
+En el libro de códigos se incluye un objetivo del laboratorio editable por cada mesa. Se guarda con la sesión, el respaldo y el informe JSON. Los respaldos de versión 2 anteriores a este campo conservan sus respuestas y reciben el objetivo inicial al recuperarse.
+
 ## Preparar el taller
 
 Consulte `GUIA_FACILITADOR.md`. Abra `imprimibles.html` para libro de códigos, formulario, informe, cosecha y diseño posterior de monitor local. La impresión del informe se hace desde su etapa; el navegador permite guardarlo como PDF. Todos los bloques suman 120 minutos, sin descanso programado. El reloj se inicia y pausa manualmente; no bloquea la navegación.

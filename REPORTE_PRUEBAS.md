@@ -1,6 +1,10 @@
 # Reporte de pruebas
 
-Fecha: 16 de octubre de 2026. Versión actual: 1.1.1. Solo se usaron datos ficticios, incluidas las respuestas de prueba.
+Fecha: 16 de octubre de 2026. Versión actual: 1.1.2. Solo se usaron datos ficticios, incluidas las respuestas de prueba.
+
+## Objetivo editable del laboratorio
+
+Se añadió un objetivo editable al inicio del libro de códigos, con guardado automático, respaldo e inclusión en el informe JSON. Los respaldos de versión 2 que todavía no incluyen el campo reciben el texto inicial sin perder sus respuestas. La prueba de este comportamiento también rechaza tipos o longitudes no válidos y comprueba que editar el objetivo no modifica las definiciones del libro.
 
 ## Actualización de publicaciones versión 1.1
 
