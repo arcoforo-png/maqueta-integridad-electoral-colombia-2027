@@ -1,5 +1,7 @@
 # Del dato al informe
 
+[Abrir la maqueta publicada](https://arcoforo-png.github.io/maqueta-integridad-electoral-colombia-2027/) · [Repositorio público](https://github.com/arcoforo-png/maqueta-integridad-electoral-colombia-2027) · [Descargar ZIP para uso local](https://github.com/arcoforo-png/maqueta-integridad-electoral-colombia-2027/archive/refs/heads/main.zip)
+
 Maqueta pedagógica de integridad de la información electoral para un taller presencial de **120 minutos**, con grupos de 5–8 personas y un dispositivo por mesa. Reconstruye libro de códigos → consultas → material bruto → asignación → calificación humana → informe. Enseña cuellos de botella y dilemas mediante decisiones breves con consecuencias visibles.
 
 Todos los actores, plataformas, publicaciones y fichas de contexto son ficticios. Está inspirada en sistemas de monitoreo electoral; no replica eMonitor+ ni utiliza su marca. No recolecta redes reales, no usa IA remota y no verifica hechos reales.
