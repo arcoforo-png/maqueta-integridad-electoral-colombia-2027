@@ -1,2 +1,96 @@
-# maqueta-integridad-electoral-colombia-2027
-Maqueta pedagógica de monitoreo electoral con datos sintéticos. Taller de 120 minutos, sesiones por mesa y funcionamiento local.
+# Del dato al informe
+
+Maqueta pedagógica de integridad de la información electoral para un taller presencial de **120 minutos**, con grupos de 5–8 personas y un dispositivo por mesa. Reconstruye libro de códigos → consultas → material bruto → asignación → calificación humana → informe. Enseña cuellos de botella y dilemas mediante decisiones breves con consecuencias visibles.
+
+Todos los actores, plataformas, publicaciones y fichas de contexto son ficticios. Está inspirada en sistemas de monitoreo electoral; no replica eMonitor+ ni utiliza su marca. No recolecta redes reales, no usa IA remota y no verifica hechos reales.
+
+## Abrir sin instalar
+
+1. Descargue y descomprima el paquete completo.
+2. Abra `index.html` con doble clic en un navegador moderno.
+3. Configure participantes y revisores; siga las nueve etapas.
+4. Guarde un respaldo antes de cerrar. La persistencia de archivos `file://` depende del navegador; el respaldo JSON permite recuperar la sesión.
+
+Todos los recursos necesarios están incluidos. No es necesario instalar Node, ejecutar un servidor ni estar conectado. La versión publicada en GitHub Pages necesita conexión para cargar inicialmente; para trabajar sin conexión use el paquete descargado. No se promete caché PWA.
+
+Cada mesa debe usar su propio dispositivo o un perfil de navegador separado. Dos pestañas del mismo origen y perfil comparten el mismo almacenamiento: no son mesas independientes. Los dispositivos distintos no sincronizan datos.
+
+Los campos son anónimos por defecto. Evite ingresar datos personales. La aplicación no contiene llamadas de red, rastreadores, cuentas ni envío de respuestas. GitHub Pages, al visitarse en línea, sirve los archivos según las condiciones de ese servicio; las respuestas del taller permanecen en el dispositivo. El facilitador acuerda con las mesas si se recogerán archivos y cuándo se eliminarán. «Nueva sesión» reemplaza los datos locales; los archivos descargados se administran aparte.
+
+## Preparar el taller
+
+Consulte `GUIA_FACILITADOR.md`. Abra `imprimibles.html` para libro de códigos, formulario, informe, cosecha y diseño posterior de monitor local. La impresión del informe se hace desde su etapa; el navegador permite guardarlo como PDF. Todos los bloques suman 120 minutos, sin descanso programado. El reloj se inicia y pausa manualmente; no bloquea la navegación.
+
+La ruta guiada propone seis publicaciones y dos segundas revisiones, ocho calificaciones. El bloque de 25 minutos representa una jornada ficticia inicial de ocho horas. La cantidad de casos y el ritmo necesitan validación con participantes; no se exige revisar las 400 publicaciones.
+
+## Exportar y recuperar
+
+- **Guardar respaldo:** sesión completa, recuperable desde el control superior. No se incluye automáticamente en ningún servidor.
+- **Informe JSON:** consulta, conteos, categorías, narrativas con IDs, calificaciones, reglas y limitaciones obligatorias.
+- **Calificaciones CSV:** una fila por revisión; publicaciones con doble revisión tienen dos filas.
+- **Decisiones JSON:** síntesis, reglas éticas y limitaciones.
+- **Experiencia JSON o CSV:** respuestas anónimas, escalas voluntarias, preguntas posteriores y compromiso.
+
+Los CSV escapan comillas y prefijan posibles fórmulas para evitar ejecución involuntaria al abrirlos en una hoja de cálculo. Un respaldo se valida antes de reemplazar el estado. Cambiar la consulta o los revisores puede invalidar revisiones: el programa solicita confirmación antes de borrarlas.
+
+## Interpretar el tablero
+
+El escenario contiene 400 publicaciones; al principio hay 200 disponibles. El pico libera las 200 restantes, y se vuelve a aplicar la consulta actual. Las palabras se interpretan como alternativas: basta encontrar cualquiera, sin distinguir tildes ni mayúsculas. No hay interpretación semántica.
+
+La capacidad es `revisores × horas ficticias × calificaciones/hora-persona`, tasa configurable de 6 a 10. Es un parámetro pedagógico acordado, sin atribución institucional verificada. La segunda revisión consume otra calificación. El exceso frente a capacidad supone una revisión por publicación; los pendientes del ejercicio son recuperadas menos publicaciones únicas efectivamente revisadas. Son medidas distintas.
+
+La cobertura compara relevantes recuperadas con relevantes del universo ficticio completo, según su referencia. Se consideran relevantes las categorías tóxica, odio, género y posible desinformación. El acuerdo es porcentaje de coincidencia exacta de categoría entre dos revisores, con número de pares. La precisión de detección es relevantes de referencia / clasificadas como daño en primera asignación. La coincidencia de categoría compara categoría humana con referencia. Ambas excluyen referencias ambiguas y decisiones «requiere contexto». No hay denominador suficiente cuando ninguna publicación cumple esos criterios.
+
+Las etiquetas de referencia no son verdad universal. Modificar definiciones desactiva precisión y coincidencia; cobertura sigue describiendo la referencia inicial y así se rotula. Los resultados de una muestra pedagógica no estiman prevalencias y no permiten comparar mesas. No hay ranking ni puntaje agregado.
+
+Las narrativas son metadatos escritos de antemano y agrupados entre publicaciones revisadas en su primera asignación. El informe permite ver evidencia, actor, plataforma y segunda revisión. No es detección automática de campañas ni prueba de coordinación.
+
+## Editar y regenerar
+
+La aplicación no requiere dependencias de terceros. Para editar y probar se necesita Node.js con soporte para `node:test` (comprobado con el entorno incluido en Codex).
+
+```text
+node scripts/generate.cjs
+node --test tests/core.test.cjs
+node scripts/preview.cjs
+```
+
+El último comando abre un servidor opcional en `http://127.0.0.1:4173`. Sirve solo para desarrollo.
+
+- `content.js`: agenda, definiciones, tarjetas, actores ficticios y plantillas de publicaciones.
+- `ui-es.js`: plantillas y textos de las nueve pantallas, separados del controlador. Para traducir, adapte este archivo, `content.js`, los rótulos del HTML y los mensajes breves del controlador. No hay traducciones adicionales incluidas.
+- `core.js`: generación, consultas, muestreo, capacidad, métricas, informes, validación y CSV.
+- `dataset.js`: datos incluidos para apertura local; `dataset.json`: copia legible.
+- `app.js`: pantallas, interacción y almacenamiento local.
+- `styles.css`: estilo adaptable, estados de foco y reglas de impresión.
+- `tests/core.test.cjs`: pruebas automatizadas de lógica y contratos de datos.
+
+Semilla fija: `20271031`; 400 registros. Para cambiar definiciones base edite `CONTENT.codebook` en `content.js`, regenere y pruebe. Para ajustar solo la sesión use las definiciones editables de la pantalla. Si cambia el esquema de respaldo, cambie la versión y actualice su validador. No incluya exportaciones de participantes en el repositorio.
+
+## Publicar en su repositorio de GitHub
+
+1. Cree un repositorio propio, por ejemplo `maqueta-integridad-electoral-colombia-2027`. Un repositorio público facilita el uso de Pages en cuentas gratuitas; compruebe las opciones de su cuenta.
+2. Suba el contenido de esta carpeta a la raíz de la rama `main`, sin incluir respaldos, cosechas, capturas ni archivos de participantes. No suba solo el ZIP.
+3. En **Settings → Pages**, seleccione publicación desde rama, `main`, carpeta `/ (root)`.
+4. Espere el despliegue y abra la URL que indique GitHub. Recorra la maqueta y pruebe una exportación en esa URL.
+5. Para republicar un cambio, actualice los archivos de la misma rama. Las instrucciones y opciones actuales pueden consultarse en [la documentación de GitHub Pages](https://docs.github.com/es/pages/getting-started-with-github-pages/creating-a-github-pages-site).
+
+La creación del repositorio y el despliegue no se consideran verificados hasta tener confirmación del servicio. Consulte `REPORTE_PRUEBAS.md` para el estado concreto de esta entrega.
+
+## Fuentes y alcance normativo
+
+Fuentes oficiales consultadas el 16 de octubre de 2026. Se incluyen como referencias contextuales, sin revisión jurídica en el taller:
+
+- [Ley 1581 de 2012, Función Pública](https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981): disposiciones generales de protección de datos personales.
+- [Ley 1257 de 2008, Función Pública](https://www1.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=34054): prevención y atención de violencias contra las mujeres.
+- [Circular única electoral de la Registraduría, versión de julio de 2024](https://www.registraduria.gov.co/IMG/pdf/20240708_circular-unica-electoral_v4.pdf): referencia a la regla del último domingo de octubre para elecciones territoriales. No se encontró en la consulta un calendario específico de 2027 que deba presentarse como confirmado. El escenario usa octubre de 2027, sin anunciar una fecha oficial de elección. Las fechas de publicaciones del 1 al 10 son ficticias.
+
+La semilla numérica no es una afirmación sobre el calendario oficial. No se incluyen rutas institucionales concretas de remisión sin verificación territorial. La maqueta enseña a acordarlas con instituciones competentes.
+
+## Licencias
+
+Código (`core.js`, `app.js`, scripts, pruebas, estructura HTML y CSS): MIT, texto en `LICENSE-CODE.txt`. Contenidos educativos, plantillas, datos sintéticos y documentación: CC BY-SA 4.0, detalles en `LICENSE-CONTENT.md`. Atribución sugerida: «Del dato al informe, maqueta pedagógica de monitoreo electoral, 2026». No implica aval de ninguna institución.
+
+## Límites de verificación
+
+Las pruebas automatizadas comprueban comportamiento del programa; no validan comprensión de participantes ni que un taller real termine en 120 minutos. La validación presencial y la comprobación en un computador limpio quedan pendientes. Los actores usan identificadores ficticios, pero ningún detector automático garantiza por sí solo ausencia de cualquier coincidencia accidental con el mundo real.

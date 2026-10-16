@@ -1,0 +1,2 @@
+// MIT. Ejecución: node scripts/generate.cjs
+const fs=require('node:fs');const path=require('node:path');const E=require('../core.js');const C=require('../content.js');const data=E.generate(C.seed,400);const root=path.resolve(__dirname,'..');fs.writeFileSync(path.join(root,'dataset.js'),'/* Datos sintéticos. CC BY-SA 4.0. Semilla '+C.seed+' */\nwindow.DATASET = '+JSON.stringify(data,null,2)+';\n');fs.writeFileSync(path.join(root,'dataset.json'),JSON.stringify(data,null,2)+'\n');console.log(`Generadas ${data.length} publicaciones; semilla ${C.seed}.`);

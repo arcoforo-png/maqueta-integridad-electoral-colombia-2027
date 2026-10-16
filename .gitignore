@@ -1,0 +1,10 @@
+node_modules/
+evidence/
+exports/
+respaldo-*.json
+experiencia-*.json
+experiencia-*.csv
+calificaciones.csv
+informe-pedagogico.json
+decisiones-mesa.json
+*.zip
