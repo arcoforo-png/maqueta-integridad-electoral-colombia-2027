@@ -1,6 +1,6 @@
 # Reporte de pruebas
 
-Fecha: 16 de octubre de 2026. Versión actual: 1.1.2. Solo se usaron datos ficticios, incluidas las respuestas de prueba.
+Fecha: 19 de octubre de 2026. Versión actual: 1.1.3. Solo se usaron datos ficticios, incluidas las respuestas de prueba.
 
 ## Objetivo editable del laboratorio
 
@@ -74,3 +74,7 @@ Se corrigieron durante la verificación una diferencia del estado inicial de res
 - **Multilingüe:** interfaz entregada en español. Plantillas de pantalla separadas en `ui-es.js` y contenidos en `content.js`; una traducción completa requiere adaptar también rótulos estáticos y mensajes del controlador.
 
 La evidencia local de interfaz y los archivos de prueba no forman parte de los datos iniciales de la maqueta. Ninguna respuesta de prueba se incluye como respuesta de una mesa real.
+
+## Consultas y título de revisión — 1.1.3
+
+18 pruebas automatizadas aprobadas. Las 11 sugerencias recuperan publicaciones del banco ficticio. Comprobación en navegador: selección múltiple, desmarcado, sincronización con escritura manual, coincidencia sin tildes ni mayúsculas y estimación de volumen. Se verificó el título «La revisión humana es el cuello de botella». Los filtros solo se aplican al material de trabajo al ejecutar la consulta.

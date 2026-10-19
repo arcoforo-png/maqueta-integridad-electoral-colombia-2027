@@ -103,3 +103,5 @@ Código (`core.js`, `app.js`, scripts, pruebas, estructura HTML y CSS): MIT, tex
 ## Límites de verificación
 
 Las pruebas automatizadas comprueban comportamiento del programa; no validan comprensión de participantes ni que un taller real termine en 120 minutos. La validación presencial y la comprobación en un computador limpio quedan pendientes. Los actores usan identificadores ficticios, pero ningún detector automático garantiza por sí solo ausencia de cualquier coincidencia accidental con el mundo real.
+
+Consultas permite elegir varias palabras de una lista desplegable o escribir otras. Las sugerencias aparecen en el banco ficticio; se buscan como alternativas sin distinguir mayúsculas ni tildes. Seleccionar no ejecuta la consulta: se conserva el botón «Ejecutar consulta».
