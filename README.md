@@ -115,3 +115,7 @@ Contexto y coordinación dejan una revisión pendiente. Toda revisión registrad
 Los respaldos de publicaciones v2 y las sesiones existentes conservan sus respuestas. Las revisiones anteriores mantienen intensidad y confianza originales sin convertirlas a la escala nueva. Sus muestras conservan el criterio histórico; las nuevas opciones se aplican al volver a seleccionar. Actualizar una revisión anterior exige completar los campos nuevos. Los respaldos del universo v1 siguen sin ser compatibles.
 
 El bloque mantiene 25 minutos. El recorrido automatizado verifica funcionamiento, no el tiempo humano de lectura y deliberación. La duración necesita prueba con participantes.
+
+## Apertura y reflexión local — 1.2.1
+
+La apertura explica el propósito de los dilemas en cajas amarillas. El cierre reúne tres preguntas sobre experiencia territorial, diagnóstico/respuestas y trabajo para 2027. Las respuestas se guardan de forma independiente en la sesión y el respaldo, y se exportan en respuestas JSON/CSV. Los compromisos del formulario anterior se conservan, con una sección visible cuando existe una respuesta.

@@ -1,6 +1,6 @@
 # Reporte de pruebas
 
-Fecha: 19 de octubre de 2026. Versión actual: 1.2.0. Solo se usaron datos ficticios, incluidas las respuestas de prueba.
+Fecha: 19 de octubre de 2026. Versión actual: 1.2.1. Solo se usaron datos ficticios, incluidas las respuestas de prueba.
 
 ## Objetivo editable del laboratorio
 
@@ -88,3 +88,7 @@ En navegador se comprobó la activación/desactivación de VBG y odio, el regist
 El recorrido automatizado comprueba funcionamiento. El bloque conserva 25 minutos con presupuesto orientativo 3/18/4; falta validar con participantes los tiempos de lectura y deliberación. El taller de 120 minutos sigue pendiente de realización.
 
 Descargas verificadas desde la interfaz: CSV con ocho filas de revisión y todos los campos, respaldo con ocho revisiones del nuevo formulario. Recarga verificada sin pérdida de respuestas. La consola del navegador no registró errores.
+
+## Apertura y reflexión local — 1.2.1
+
+24 pruebas aprobadas. Se verifica el guardado de las tres respuestas por separado, exportación JSON/CSV, conservación del compromiso anterior y rechazo de respaldos con reflexiones inválidas. La agenda conserva 120 minutos.
