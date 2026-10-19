@@ -1,6 +1,6 @@
 # Reporte de pruebas
 
-Fecha: 19 de octubre de 2026. Versión actual: 1.1.3. Solo se usaron datos ficticios, incluidas las respuestas de prueba.
+Fecha: 19 de octubre de 2026. Versión actual: 1.2.0. Solo se usaron datos ficticios, incluidas las respuestas de prueba.
 
 ## Objetivo editable del laboratorio
 
@@ -78,3 +78,13 @@ La evidencia local de interfaz y los archivos de prueba no forman parte de los d
 ## Consultas y título de revisión — 1.1.3
 
 18 pruebas automatizadas aprobadas. Las 11 sugerencias recuperan publicaciones del banco ficticio. Comprobación en navegador: selección múltiple, desmarcado, sincronización con escritura manual, coincidencia sin tildes ni mayúsculas y estimación de volumen. Se verificó el título «La revisión humana es el cuello de botella». Los filtros solo se aplican al material de trabajo al ejecutar la consulta.
+
+## Selección y formulario ampliado — 1.2.0
+
+23 pruebas automatizadas aprobadas: criterios nuevos por plataformas/fecha/mujeres, selección sin etiquetas internas de daño, formulario múltiple con validación, campos condicionales, casos pendientes, acuerdo por conjuntos, agrupación de narrativas humanas, CSV de todos los campos y recuperación de respaldos nuevos y anteriores.
+
+En navegador se comprobó la activación/desactivación de VBG y odio, el registro de una revisión pendiente y su exclusión del informe, su posterior resolución y el recorrido de ocho asignaciones. Resultado de la prueba sintética: seis publicaciones resueltas, ocho revisiones listas, dos pares, 394 pendientes del universo completo. Estos valores solo describen la prueba; no son resultados de participantes.
+
+El recorrido automatizado comprueba funcionamiento. El bloque conserva 25 minutos con presupuesto orientativo 3/18/4; falta validar con participantes los tiempos de lectura y deliberación. El taller de 120 minutos sigue pendiente de realización.
+
+Descargas verificadas desde la interfaz: CSV con ocho filas de revisión y todos los campos, respaldo con ocho revisiones del nuevo formulario. Recarga verificada sin pérdida de respuestas. La consola del navegador no registró errores.

@@ -42,11 +42,11 @@ No hay descanso programado. Incorpore pausas de cuidado si alguien lo necesita, 
 
 **Libro de códigos:** use las definiciones preparadas. Compare crítica legítima y daño. Ajustar una regla es suficiente. Si cambia una definición, la comparación con las etiquetas originales se desactiva: haga visible esa consecuencia.
 
-**Consultas:** ejecute primero la consulta sin palabras ni filtros. Pruebe «presupuesto» para reducir resultados; observe el cambio y luego recupere la consulta amplia para disponer de variedad en la muestra guiada. Una consulta nueva borra la muestra anterior previa confirmación: es intencional, no un error de almacenamiento. Antes de revisar, conviene comparar consultas.
+**Consultas:** ejecute primero la consulta sin palabras ni filtros. Pruebe «presupuesto» para reducir resultados; observe el cambio y luego recupere la consulta amplia para explorar criterios de selección sobre material amplio. Una consulta nueva borra la muestra anterior previa confirmación: es intencional, no un error de almacenamiento. Antes de revisar, conviene comparar consultas.
 
 **Volumen:** active el pico. Compare 400 recuperadas, si la consulta es amplia, con la capacidad por defecto de 128 calificaciones en la jornada. Una segunda revisión reduce la capacidad disponible para publicaciones únicas. No confunda exceso teórico frente a jornada con pendientes reales del ejercicio. Registre una decisión de muestreo o de cuidado y aplique el ajuste con sus controles; las tarjetas no cambian recursos automáticamente.
 
-**Asignación y calificación:** seleccione la estrategia guiada. La mesa verá seis casos variados cuando estén presentes en su consulta. Cada formulario indica el rol: cambie de persona cuando cambie ese rol. Las dos segundas revisiones deben hacerse sin consultar la respuesta inicial. No imponga una categoría para lograr acuerdo; muestre que el desacuerdo necesita contexto y criterios. Si falta tiempo, termine cuatro primeras revisiones y un par, dejando explícitos los pendientes.
+**Asignación y calificación:** seleccione «Incluir distintas plataformas» y explique qué entra primero y qué queda fuera. Se eligen hasta seis publicaciones del material recuperado. El número responde al tiempo del taller; no garantiza variedad de daños ni representatividad. Cada formulario indica el rol: cambie de persona cuando cambie ese rol. Las dos segundas revisiones deben hacerse sin consultar la respuesta inicial. No imponga una categoría para lograr acuerdo; muestre que el desacuerdo necesita contexto y criterios. Si falta tiempo, termine cuatro primeras revisiones y un par, dejando explícitos los pendientes.
 
 **Informe:** lea primero cuántas publicaciones se revisaron, después las categorías y narrativas, y finalmente las limitaciones. Abra evidencia y discrepancias. La precisión pedagógica no acredita verdad ni fiabilidad en el mundo real. Una narrativa agrupada no prueba coordinación. Asegure que las mesas sepan qué pueden y qué no pueden concluir.
 
@@ -66,10 +66,22 @@ Los ejemplos no usan víctimas reales ni detalles gráficos. Remisión, segurida
 
 El pico y un desacuerdo son los eventos centrales. Revisor que necesita pausa y cambio de prioridad son opcionales. Use solo una variante si el grupo va adelantado; ajuste recursos o muestreo explícitamente y registre la regla.
 
-Si una mesa se retrasa, conserve la ruta completa: use definiciones preconfiguradas, consulta amplia, muestra guiada y menos formularios; genere un informe parcial con los pendientes. Reduzca preguntas posteriores y exposición oral, sin borrar el dilema ni presentar casos pendientes como revisados.
+Si una mesa se retrasa, conserve la ruta completa: use definiciones preconfiguradas, consulta amplia, selección por plataformas y menos formularios; genere un informe parcial con los pendientes. Reduzca preguntas posteriores y exposición oral, sin borrar el dilema ni presentar casos pendientes como revisados.
 
-Si hay cero resultados, quite términos o filtros y vuelva a ejecutar. Si falla la persistencia, descargue un respaldo y use «Recuperar». Si un dispositivo falla, continúe con las plantillas impresas. Para calcular acuerdo en papel: pares con la misma categoría / pares revisados por dos personas × 100; con cero pares, registre «sin base suficiente».
+Si hay cero resultados, quite términos o filtros y vuelva a ejecutar. Si falla la persistencia, descargue un respaldo y use «Recuperar». Si un dispositivo falla, continúe con las plantillas impresas. Para calcular acuerdo en papel: pares con el mismo conjunto de categorías / pares con dos revisiones listas × 100; con cero pares, registre «sin base suficiente».
 
 ## Validación después del primer taller
 
 Registre duración real por bloque, dónde se atascaron las mesas, si distinguieron los dos tiempos y las dos medidas de pendientes, y si identificaron correctamente los límites del informe. Use la retroalimentación para ajustar muestra, instrucciones y tiempos dentro de los 120 minutos. Las pruebas automáticas no reemplazan esta validación presencial.
+
+## Formulario ampliado y distribución de los 25 minutos
+
+Reserve como pauta inicial 3 minutos para elegir criterio y repartir roles, 18 para registrar hasta ocho revisiones y 4 para comparar pares y reconocer pendientes. Este presupuesto equivale a unos 2 minutos y 15 segundos por asignación si se trabajan en secuencia. Es una pauta a probar, no una duración validada con participantes. Si la lectura requiere más tiempo, conserve el recorrido y deje casos pendientes de forma explícita.
+
+Cada persona identifica categorías, destinatario, formas del lenguaje, característica utilizada para atacar, expresiones de VBG cuando apliquen, intensidad del odio cuando aplique, narrativa de tres a seis palabras y decisión. La nota es opcional. No presuponga daño por mencionar a una mujer, ni odio por una palabra aislada. Una publicación puede combinar categorías. Expresión legítima, fuera del objetivo y evidencia insuficiente se eligen por separado.
+
+Las expresiones de VBG se habilitan con la categoría de género. La escala 1–7 se usa solo para odio y toma el nivel más alto sustentado. No convierta la intensidad anterior de tres niveles. El banco no contiene ejemplos de todos los niveles; la existencia de una opción no significa que deba usarse.
+
+Solicitar contexto o consultar a la coordinación guarda una revisión pendiente y consume capacidad. Para resolverla, vuelva a su asignación y guarde una decisión lista. No hay envío automático a una coordinación externa. El informe excluye esos casos de categorías y narrativas finales. Una publicación requiere todas sus asignaciones listas para contarse como resuelta. Compare el conjunto de categorías de las dos revisiones sin imponer acuerdo. En el informe pueden aparecer respuestas individuales listas aunque el caso siga esperando su otra revisión.
+
+Los ocho campos se guardan en el respaldo, informe JSON y CSV. En sesiones anteriores se conservan respuestas y muestra, con aviso al actualizar. Pruebe una sesión nueva antes del taller para conocer el criterio de selección actual.

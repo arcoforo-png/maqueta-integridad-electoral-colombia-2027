@@ -29,7 +29,7 @@ En el libro de códigos se incluye un objetivo del laboratorio editable por cada
 
 Consulte `GUIA_FACILITADOR.md`. Abra `imprimibles.html` para libro de códigos, formulario, informe, cosecha y diseño posterior de monitor local. La impresión del informe se hace desde su etapa; el navegador permite guardarlo como PDF. Todos los bloques suman 120 minutos, sin descanso programado. El reloj se inicia y pausa manualmente; no bloquea la navegación.
 
-La ruta guiada propone seis publicaciones y dos segundas revisiones, ocho calificaciones. El bloque de 25 minutos representa una jornada ficticia inicial de ocho horas. La cantidad de casos y el ritmo necesitan validación con participantes; no se exige revisar las 400 publicaciones.
+La coordinación selecciona hasta seis publicaciones por diversidad de plataformas, antigüedad o prioridad a mujeres en política. Con al menos dos revisores se añaden dos segundas revisiones: hasta ocho asignaciones. El bloque de 25 minutos representa una jornada ficticia inicial de ocho horas. La cantidad de casos y el ritmo necesitan validación con participantes; no se exige revisar las 400 publicaciones.
 
 ## Exportar y recuperar
 
@@ -47,11 +47,11 @@ El escenario contiene 400 publicaciones; al principio hay 200 disponibles. El pi
 
 La capacidad es `revisores × horas ficticias × calificaciones/hora-persona`, tasa configurable de 6 a 10. Es un parámetro pedagógico acordado, sin atribución institucional verificada. La segunda revisión consume otra calificación. El exceso frente a capacidad supone una revisión por publicación; los pendientes del ejercicio son recuperadas menos publicaciones únicas efectivamente revisadas. Son medidas distintas.
 
-La cobertura compara relevantes recuperadas con relevantes del universo ficticio completo, según su referencia. Se consideran relevantes las categorías tóxica, odio, género y posible desinformación. El acuerdo es porcentaje de coincidencia exacta de categoría entre dos revisores, con número de pares. La precisión de detección es relevantes de referencia / clasificadas como daño en primera asignación. La coincidencia de categoría compara categoría humana con referencia. Ambas excluyen referencias ambiguas y decisiones «requiere contexto». No hay denominador suficiente cuando ninguna publicación cumple esos criterios.
+La cobertura compara relevantes recuperadas con relevantes del universo ficticio completo, según su referencia. Se consideran relevantes las categorías tóxica, odio, género y posible desinformación. El acuerdo compara el conjunto completo de categorías entre dos revisiones listas, con número de pares. La precisión de detección es relevantes de referencia / clasificadas como daño en primera asignación. La coincidencia exacta exige una sola categoría humana igual a la referencia del escenario. Ambas excluyen referencias ambiguas y decisiones «requiere contexto». No hay denominador suficiente cuando ninguna publicación cumple esos criterios.
 
 Las etiquetas de referencia no son verdad universal. Modificar definiciones desactiva precisión y coincidencia; cobertura sigue describiendo la referencia inicial y así se rotula. Los resultados de una muestra pedagógica no estiman prevalencias y no permiten comparar mesas. No hay ranking ni puntaje agregado.
 
-Las narrativas son metadatos escritos de antemano y agrupados entre publicaciones revisadas en su primera asignación. El informe permite ver evidencia, actor, plataforma y segunda revisión. No es detección automática de campañas ni prueba de coordinación.
+Las narrativas nuevas las escriben las personas revisoras en tres a seis palabras. Se agrupan textos idénticos de la primera revisión de publicaciones resueltas. Los respaldos anteriores conservan las narrativas del escenario con la indicación «Referencia anterior». El informe permite ver evidencia, actor, plataforma y segunda revisión. No es detección automática de campañas ni prueba de coordinación.
 
 ## Editar y regenerar
 
@@ -105,3 +105,13 @@ Código (`core.js`, `app.js`, scripts, pruebas, estructura HTML y CSS): MIT, tex
 Las pruebas automatizadas comprueban comportamiento del programa; no validan comprensión de participantes ni que un taller real termine en 120 minutos. La validación presencial y la comprobación en un computador limpio quedan pendientes. Los actores usan identificadores ficticios, pero ningún detector automático garantiza por sí solo ausencia de cualquier coincidencia accidental con el mundo real.
 
 Consultas permite elegir varias palabras de una lista desplegable o escribir otras. Las sugerencias aparecen en el banco ficticio; se buscan como alternativas sin distinguir mayúsculas ni tildes. Seleccionar no ejecuta la consulta: se conserva el botón «Ejecutar consulta».
+
+## Formulario de revisión 1.2.0
+
+Ocho campos con ayudas: clasificación múltiple, destinatario, formas del lenguaje, característica del ataque, expresiones de VBG, intensidad del odio (1–7, solo si aplica), narrativa y decisión. Nota opcional. Adaptación pedagógica de la capacitación suministrada por la persona facilitadora; el archivo original y sus ejemplos no forman parte del sitio.
+
+Contexto y coordinación dejan una revisión pendiente. Toda revisión registrada consume capacidad. Guardar de nuevo la misma asignación no añade otra unidad en esta simplificación. Una publicación solo se cuenta como resuelta cuando todas sus revisiones asignadas están listas; los pendientes no inflan el informe. Los conteos de categorías pueden superar el número de publicaciones por la selección múltiple. El informe JSON y el CSV conservan todos los campos y estados.
+
+Los respaldos de publicaciones v2 y las sesiones existentes conservan sus respuestas. Las revisiones anteriores mantienen intensidad y confianza originales sin convertirlas a la escala nueva. Sus muestras conservan el criterio histórico; las nuevas opciones se aplican al volver a seleccionar. Actualizar una revisión anterior exige completar los campos nuevos. Los respaldos del universo v1 siguen sin ser compatibles.
+
+El bloque mantiene 25 minutos. El recorrido automatizado verifica funcionamiento, no el tiempo humano de lectura y deliberación. La duración necesita prueba con participantes.
